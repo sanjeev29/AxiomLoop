@@ -1,5 +1,9 @@
 # AxiomLoop — Deep Evidence Researcher
 
+[![Watch the demo on YouTube](https://img.youtube.com/vi/tuks7Ay7bOs/maxresdefault.jpg)](https://youtu.be/tuks7Ay7bOs)
+
+> ▶ [Watch the 2-minute walkthrough on YouTube](https://youtu.be/tuks7Ay7bOs)
+
 Deep Evidence Researcher turns a single question into a structured investigation. You type a question; the agent searches arXiv and Google Scholar for relevant papers, opens the promising ones to read their actual content, and as it goes it saves every concrete claim it finds into a small SQLite notebook — recording not just the claim but its subject, the relation, the value, the verbatim quote, and the source URL. Because every note is structured the same way, the system can automatically group claims that talk about the same thing and flag where sources agree, disagree, or stand alone. When the agent has enough evidence, it writes a short synthesis citing the URLs, and then a separate verifier pass re-reads the notebook to produce a typed report — agreements, disagreements with each side's sources, and a confidence score. The whole loop runs through a multi-provider LLM gateway so you can pick which models (Gemini, Groq, etc.) are allowed to do the thinking, and a Streamlit UI streams every search, page fetch, and note in real time so you can see *how* the answer was built, not just what it is.
 
 ## What's inside
