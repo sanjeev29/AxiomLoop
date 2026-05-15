@@ -1,0 +1,45 @@
+# ── Secrets & env ─────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+# Keep .env-template — it documents the expected variables
+
+# ── Local data & databases ────────────────────────────────────
+*.db
+*.db-shm
+*.db-wal
+notes.db
+llm_gatewayV2/gateway_v2.db
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[oc]
+*.egg-info/
+build/
+dist/
+wheels/
+.venv/
+venv/
+.python-version
+
+# ── Tooling caches ────────────────────────────────────────────
+.ruff_cache/
+.mypy_cache/
+.pyrefly/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ── Editor / OS ───────────────────────────────────────────────
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── Streamlit ─────────────────────────────────────────────────
+.streamlit/secrets.toml
+
+# ── Project-specific (held back from the repo) ────────────────
+prompt-check.md
+technical_research_demo.mp4
+technical_research_demo.webp
