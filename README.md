@@ -37,6 +37,15 @@ Deep Evidence Researcher turns a single question into a structured investigation
 
 Notes accumulate in `notes.db` alongside the server.
 
+## Further Development
+
+- [ ] **Semantic Scholar integration** — free API (no key), gives the citation graph (forward + backward refs). For a project called "Deep Evidence", walking citations is the whole game.
+- [ ] **PDF reading** (`fetch_pdf` via `pypdf` / `pdfplumber`) — half the arXiv hits are PDFs and `trafilatura` silently fails on them; the agent currently reads only the abstract.
+- [ ] **Tavily / Brave web search** — for non-academic questions (news, blogs, docs). Today the toolbelt is research-paper-shaped only.
+- [ ] **Two-pass research mode** — pass 1 gathers (5–6 turns), pass 2 drills into contradictions surfaced by `notes_grouped`. UI toggle. Today the agent stops at "good enough" without using its own contradiction signal.
+- [ ] **Inline citation hover** — each `(https://…)` link in the synthesis reveals the supporting note's quote on hover. Cheap to build, big trust boost.
+- [ ] **Source quality signal** — flag peer-reviewed vs preprint vs blog in the notes table; weight synthesis toward stronger sources.
+
 ## Credits
 
 `llm_gatewayV2/` was authored by [Rohan Shravan](https://www.linkedin.com/in/rohanshravan/) and vendored into this repo with permission. All other code in this repository is original to AxiomLoop.
